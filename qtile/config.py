@@ -174,12 +174,12 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                widget.Clock(format="%Y-%m-%d %a %H:%M"),
                 widget.QuickExit(),
             ],
             24,
-            border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            border_width=[2, 2, 2, 2],  # Draw top and bottom borders
+            border_color=["dddddd", "666666", "666666", "dddddd"]  # Borders are magenta
         ),
         #background="#000000",
         #wallpaper=logo,
@@ -192,11 +192,11 @@ screens = [
 ]
 
 # Drag floating layouts.
-mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front()),
-]
+#mouse = [
+#    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
+#    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
+#    Click([mod], "Button2", lazy.window.bring_to_front()),
+#]
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list

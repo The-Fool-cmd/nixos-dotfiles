@@ -149,8 +149,8 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="JeyBrains Mono",
-    fontsize=18,
+    font="JetBrains Mono",
+    fontsize=16,
     padding=4,
 )
 extension_defaults = widget_defaults.copy()
